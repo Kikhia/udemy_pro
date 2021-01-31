@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block body_block %}
+
+  <h1>Here are the users</h1>
+  {% if user %}
+    <ol>
+      {% for us in user %}
+      <li> <h3>user info</h3> </li>
+        <ul>
+          <li>First Name: {{ us.first_name}}</li>
+          <li>Last Name: {{ us.last_name}}</li>
+          <li>Email: {{ us.email}}</li>
+        </ul>
+        {% endfor %}
+    </ol>
+{% endif %}
+{% endblock %}
